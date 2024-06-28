@@ -141,20 +141,21 @@ header .search{
     .searchBtn{
         left: 0;
         padding-right: 10px;
-        font-size: 3em;
+        font-size: 3.6em;
     }
     .searchBox input{
         font-size: 1em;
     }
-    input::placeholder{
+    .searchBox input::placeholder{
         font-size: 1em !important;
     }
     .Logo{
         font-size: 4em;
-        margin-left: 35vw;
+        margin-right:30%;
+        margin-left:auto;
     }
     .closeBtn{
-        font-size: 3em;
+        font-size: 3.6em;
     }
     .menuToggle{
         margin-left: 10px;
@@ -194,7 +195,7 @@ header .search{
     }
     
     header .navigation li a{
-        font-size: 1em;
+        font-size: 1.5em !important;
     }
     .hide{
         display: none;

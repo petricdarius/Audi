@@ -68,7 +68,7 @@
         text-align: center;
     }
     .disc {
-        width: 100%;
+        width: 100% !important;
         height: auto;
     }
     .text-cars {
