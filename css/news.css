@@ -83,10 +83,11 @@ p{
         font-weight: 500;
     }
     .link{
-        font-size:3em !important;
+        font-size:1.5em !important;
         font-weight: 500;
-        width:100% !important;
+        width:90% !important;
         margin-left:0 !important;
+        left:5%;
     }
     .news .newsdesc{
         font-size:1.5em !important;
@@ -130,6 +131,9 @@ p{
         margin: 10px 0; 
         font-size:1.4vw;
     }
+    .link ion-icon{
+        font-size:1.4em !important;
+    }
 }
 .tracknews .tracktext {
     padding:10px;
@@ -162,10 +166,10 @@ p{
 .link {
     text-decoration: none;
     color: #333;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     display: flex; 
     align-items: center; 
-    width: 65%;
+    width: 90% !important;
     margin-left: 17%;
     padding: 5px;
     position: relative;
