@@ -58,8 +58,11 @@ h1 {
     .discover{
         font-weight: 500;
         width:55% !important;
-        left:13%;
-        font-size:1em !important;
+        left:5vw;
+        font-size:3vw !important;
+    }
+    .discover .arrow{
+        font-size:1em   ;
     }
 }
 .discover {
@@ -81,7 +84,7 @@ h1 {
 
 .discover ion-icon {
     margin-left: 10px;
-    font-size: 2vw !important;
+    font-size: 2vw ;
 
 }
 
