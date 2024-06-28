@@ -1,0 +1,221 @@
+p{
+    letter-spacing: 2px;
+}
+
+.news {
+    margin-top: 10em;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsdesc {
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+#flex-container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.tracknews, .r8news, .etronnews {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+    margin: 10px;
+    width: calc(33.33% - 20px); 
+    min-width: 300px;
+    height: auto;
+}
+
+#trackimg {
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .tracknews, .r8news, .etronnews {
+        width: 100%;
+        height: auto;
+    }
+    .tracknews .tracktext{
+        font-size:3em !important;
+        font-weight: 600;
+    }
+    .r8news .r8text{
+        font-size:3em !important;
+        font-weight: 600;
+    }
+    .etronnews .etrontext{
+        font-size:3em !important;
+        font-weight: 600;
+    }
+    .link{
+        font-size:2em !important;
+        font-weight: 600;
+        width:80% !important;
+        margin-left:9% !important;
+    }
+    .newsdesc{
+        font-size:2em !important;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 992px) {
+    .tracknews, .r8news, .etronnews {
+        width: 100%;
+        height: auto;
+    }
+    .tracknews .tracktext{
+        font-size:3.5em !important;
+        font-weight: 500;
+    }
+    .r8news .r8text{
+        font-size:3.5em !important;
+        font-weight: 500;
+    }
+    .etronnews .etrontext{
+        font-size:3.5em !important;
+        font-weight: 500;
+    }
+    .link{
+        font-size:1.5em !important;
+        font-weight: 500;
+        width:90% !important;
+        margin-left:0 !important;
+        left:5%;
+    }
+    .news .newsdesc{
+        font-size:1.5em !important;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+    .tracknews, .r8news, .etronnews {
+        width: 100%;
+        height: auto;
+    }
+    .tracknews .tracktext{
+        font-size:4em !important;
+        font-weight: 400 !important;
+    }
+    .r8news .r8text{
+        font-size:4em !important;
+        font-weight: 400 !important;
+    }
+    .etronnews .etrontext{
+        font-size:4em !important;
+        font-weight: 400 !important;
+    }
+    .link{
+        font-size:2em !important;
+        font-weight: 400 !important;
+        width:90% !important;
+        left:5% !important;
+    }
+    .newsdesc{
+        font-size:3.5em !important;
+        font-weight: 400 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .tracknews, .r8news, .etronnews {
+        width: 100%;
+        height: auto;
+        margin: 10px 0; 
+        font-size:1.4vw;
+    }
+    .link ion-icon{
+        font-size:1.4em !important;
+    }
+}
+.tracknews .tracktext {
+    padding:10px;
+    text-align: left ;
+    text-decoration: none;
+    color:#333;
+    font-weight:300;
+    font-size:1.4vw;
+}
+.r8news .r8text {
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    font-size: 1.4vw;
+}
+.publish{
+    font-weight:100;
+    font-size:0.7em !important;
+}
+.etronnews .etrontext{
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    font-size: 1.4vw;
+}
+.link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4vw;
+    display: flex; 
+    align-items: center; 
+    width: 90% !important;
+    margin-left: 5%;
+    padding: 5px;
+    position: relative;
+    z-index: 0;
+    text-align: left;
+    padding-left: 10px; 
+    margin-bottom: 20px;
+    margin-top:3vw;
+}
+
+.link ion-icon {
+    margin-left: 5px;
+    font-size: 2vw !important;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border: 3px solid #333;
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+.tracknews::after, .r8news::after, .etronnews::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tracknews:hover, .r8news:hover, .etronnews:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.4s ease-in-out;
+}
+
+.tracknews:hover::after, .r8news:hover::after, .etronnews:hover::after {
+    opacity: 1;
+}
