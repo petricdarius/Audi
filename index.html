@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/tocars.css">
     <link rel="icon" href="a3195b-audi.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/tocars.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/images.css">
     <link rel="stylesheet" href="css/news.css">
@@ -107,7 +107,10 @@
                 At Audi, your career is a journey towards innovation and excellence
                 in the automotive industry. With a global innovation and manufacturing network, 
                 we offer diverse opportunities in engineering, design, research and more. Join 
-                the Audi team and be part of the transformation of the global automotive industry.
+                the Audi team and be part of the transformation of the global automotive industry.    
+            <a href="discover.html" class="discover">Discover us
+                <ion-icon class="arrow" name="arrow-round-forward"></ion-icon>
+            </a>
             </p>
         </div>
     </div>
@@ -154,6 +157,7 @@
 
         }
         menuToggle.onclick = function(){
+            menuToggle.classList.toggle('open');
             navigation.classList.toggle('open');
             searchBox.classList.remove('active');
             closeBtn.classList.remove('active');
