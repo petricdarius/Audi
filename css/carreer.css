@@ -1,0 +1,58 @@
+.career {
+    display: flex;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+    min-width: 1000px !important;
+}
+
+.career .working {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.text-container {
+    width: calc(50% - 20px); 
+    padding: 2vw;
+}
+
+.careertext {
+    font-size: 1.1vw; 
+}
+
+h1 {
+    margin-top: -35px !important;
+    font-size: 1.4vw;
+}
+
+@media (max-width: 1550px) {
+    .career {
+        flex-direction: column;
+        align-items: center;
+        width: 76.5% !important; 
+        min-width: auto !important; 
+    }
+    h1 {
+        font-size: 1.5em !important;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+    .working {
+        width: 100% !important;
+        height: auto;
+    }
+    .text-container {
+        width: 100% !important; 
+        text-align: center;
+        padding: 2vw;
+    }
+    .careertext {
+        width: 100% !important;
+        font-size: 1.4em !important;
+        font-weight: 300 !important;
+    }
+}

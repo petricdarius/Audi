@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/images.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/carreer.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi</title>
+</head>
+<body>
+    <style>
+        *{  
+            scroll-behavior: smooth !important;
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+    <header name="top">
+        <a href="#" class="Logo"><i class="lni lni-audi"></i></a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Electric vehicles</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search" class="searchBtn"></ion-icon>
+                    <ion-icon name="close" class="closeBtn"></ion-icon>
+                </span>
+            </div>
+            <ion-icon name="menu" class="menuToggle"></ion-icon>
+        </div>
+            <div class="searchBox">
+                <input type="text" placeholder="Search" name="" id="">
+            </div>
+    </header>
+    <div class="image-container">
+        <img src="images/headquarter.jpg" class="responsive" id="headquarter">
+        <div class="center-text">
+            Advanced, Unique, Daring, Ingenious<br>Welcome to Audi.
+            <br>
+            <br>
+            <a href="aboutus.html" class="lnm">Learn More</a>
+        </div>
+    </div>
+    <div class="news">
+        <p class="newsdesc">Find out more about our latest achievements.</p>
+        <div id="flex-container">
+            <div class="tracknews">
+                <img src="images/track.jpg" id="trackimg">
+                <a href="rs3track.html" class="tracktext">
+                    <p class="publish">Published: 28 March 2024</p>
+                    <p><strong>Audi RS3 Dominates the Track: A New Era of Compact Performance</strong><br><br>
+                        Witness the facelifted Audi RS3 shatter records on the Nürburgring,
+                        timing an impressive 7m 33.12s lap time. It outpaces rivals like
+                        the BMW M2 by over five seconds, showing unparalleled speed and precision.</p>
+                </a>
+                <a href="rs3track.html" class="link">Experience the speed revolution.
+                    <ion-icon class="arrow" name="arrow-round-forward"></ion-icon>
+                </a>
+            </div>
+            <div class="r8news">
+                <img src="images/r8.jpg" id="trackimg">
+                <a href="lastr8.html" class="r8text">
+                    <p class="publish">Published: 24 Jun 2024</p>
+                    <p><strong>This is the last Audi R8 V10</strong><br><br>
+                        Audi's iconic supercar concludes its nearly 18-year production
+                        run, with the final model rolling off the assembly line.
+                        Enthusiasts are now eagerly awaiting news of its electric
+                        successor, marking the end of an era for the brand.</p>
+                </a>
+                <a href="lastr8.html" class="link">Witness the legacy come to a close.
+                    <ion-icon name="arrow-round-forward"></ion-icon>
+                </a>
+            </div>
+            <div class="etronnews">
+                <img src="images/etron.jpg" id="trackimg">
+                <a href="etron.html" class="etrontext">
+                    <p class="publish">Published: 18 Jun 2024</p>
+                    <p><strong>The Audi e-tron GT: Electric Performance Redefined</strong><br><br>
+                        Audi's e-tron GT quattro has redefined electric performance since its 2021 debut,
+                        blending striking design with robust drive capabilities and agile handling.
+                        Audi introduces its first fully electric RS performance model.</p>
+                </a>
+                <a href="etron.html" class="link">Discover the future of performance.
+                    <ion-icon name="arrow-round-forward"></ion-icon>
+                </a>
+            </div>
+        </div>       
+    </div>
+    <div class="career">
+            <img src="images/career.jpg" class="working">
+        <div class="text-container">
+            <h1>Welcome to a new beggining. <br> <br></h1>
+            <p class="careertext">
+                At Audi, your career is a journey towards innovation and excellence
+                in the automotive industry. With a global innovation and manufacturing network, 
+                we offer diverse opportunities in engineering, design, research and more. Join 
+                the Audi team and be part of the transformation of the global automotive industry.
+            </p>
+        </div>
+    </div>
+    
+    
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let searchBtn = document.querySelector('.searchBtn');
+        let closeBtn = document.querySelector('.closeBtn');
+        let searchBox = document.querySelector('.searchBox');
+        let navigation = document.querySelector('.navigation');
+        let menuToggle = document.querySelector('.menuToggle');
+        let header = document.querySelector('header');
+
+        searchBtn.onclick = function(){
+            searchBox.classList.add('active');
+            closeBtn.classList.add('active');
+            searchBtn.classList.add('active');
+            menuToggle.classList.add('hide');
+            header.classList.remove('open');
+        }
+        closeBtn.onclick = function(){
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+            menuToggle.classList.remove('hide');
+
+        }
+        menuToggle.onclick = function(){
+            navigation.classList.toggle('open');
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
