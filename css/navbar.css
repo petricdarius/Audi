@@ -147,7 +147,7 @@ header .search{
         font-size: 1em;
     }
     input::placeholder{
-        font-size: 1em;
+        font-size: 1em !important;
     }
     .Logo{
         font-size: 4em;
@@ -204,5 +204,8 @@ header .search{
 @media(max-width: 1100px){
     header ul li a{
         font-size: 2.1vw !important;
+    }
+    input::placeholder{
+        font-size: 2em !important;
     }
 }
