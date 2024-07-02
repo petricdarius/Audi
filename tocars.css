@@ -7,17 +7,17 @@
     margin-right: auto;
     height: auto;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
-    min-width: 1000px !important;
+    min-width: 1000px;
 }
 .text-cars {
     width: calc(50% - 20px); 
     padding: 1.5vw;
 }
 .cars .disc {
-    width: 60% ;
-    height: auto !important;
+    width: 60%;
+    height: auto;
 }
-.carsrtext{
+.carsrtext {
     font-size: 0.8vw; 
 }
 .discover2 {
@@ -32,15 +32,13 @@
     position: relative;
     z-index: 0;
     text-align: left;
-    padding-left: 10px; 
     margin-bottom: 20px;
-    margin-top:3vw;
+    margin-top: 3vw;
 }
 
 .discover2 ion-icon {
     margin-left: 12px;
-    font-size: 1.5vw !important;
-
+    font-size: 1.5vw;
 }
 .discover2::after {
     content: '';
@@ -54,18 +52,19 @@
     transition: width 0.5s ease-in-out;
 }
 .discover2:hover::after {
-    width: 95% !important;
+    width: 95%;
 }
+
 @media (max-width: 1550px) {
     .cars {
         flex-direction: column-reverse;
         align-items: center;
-        width: 76.5% !important; 
-        min-width: auto !important; 
+        width: 76.5%;
+        min-width: auto;
     }
     h1 {
-        font-size: 1.5em !important;
-        margin-top: 0 !important;
+        font-size: 1.5em;
+        margin-top: 0;
         text-align: center;
     }
     .disc {
@@ -73,22 +72,22 @@
         height: auto;
     }
     .text-cars {
-        width: 100% !important; 
+        width: 100%; 
         text-align: center;
         padding: 2vw;
     }
     .carsrtext {
-        width: 100% !important;
-        font-size: 1.4em !important;
-        font-weight: 300 !important;
+        width: 100%;
+        font-size: 1.4em;
+        font-weight: 300;
     }
-    .discover2{
-        font-weight: 500;
-        width:60% !important;
-        left:5% !important;
-        font-size: 1em !important;
+    .discover2 {
+        font-weight: 400;
+        width: 80%;
+        left: 0.1em;
+        font-size: 3vw;
     }
-    .discover2 ion-icon{
-        font-size:2em !important;
+    .discover2 ion-icon {
+        font-size: 1em;
     }
 }

@@ -57,12 +57,12 @@ h1 {
     }
     .discover{
         font-weight: 500;
-        width:60% !important;
-        left:13%;
-        font-size:1em !important;
+        width:55% !important;
+        left:5vw;
+        font-size:3vw !important;
     }
-    .discover ion-icon{
-        font-size:2em ;
+    .discover .arrow{
+        font-size:1em   ;
     }
 }
 .discover {

@@ -51,17 +51,25 @@
 .image-container:hover::before {
     opacity: 1;
 }
-
-@media (max-width: 768px) {
-    .image-container img {
-        height:auto;
-        object-fit: cover; 
-    }
-}
 .lnm{
-    font-size:0.5em !important;
+    font-size:0.5em ;
     padding:25px;
     border:2px solid #fff;
     color:#fff;
     text-decoration: none;
+}
+@media (max-width: 800px) {
+    .image-container {
+        width: 100%;
+        height: auto;
+        background-image: url('../images/headquarter.jpg');
+        background-size: cover;
+      }
+    .center-text{
+        font-size:1.5em;
+        width:100%;
+    }
+    .lnm{
+        font-size:0.8em;
+    }
 }
