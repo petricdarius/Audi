@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -44,35 +45,90 @@
                 <input type="text" placeholder="Search" name="" id="">
             </div>
     </header>
-    <script>
-        let searchBtn = document.querySelector('.searchBtn');
-        let closeBtn = document.querySelector('.closeBtn');
-        let searchBox = document.querySelector('.searchBox');
-        let navigation = document.querySelector('.navigation');
-        let menuToggle = document.querySelector('.menuToggle');
-        let header = document.querySelector('header');
+    <div class="content" style="margin-top:10vw !important;">
+    <div class="bottom">
+        <div class="medias">
+            <a href="https://www.instagram.com/audi/"><ion-icon name="logo-instagram" class="medialink"></ion-icon></a>
+            <a href="https://www.facebook.com/audi.ro/?locale=ro_RO"><ion-icon name="logo-facebook" class="medialink"></ion-icon></a>
+            <a href="https://x.com/audi"><ion-icon name="logo-twitter" class="medialink"></ion-icon></a>
+            <a href="https://www.youtube.com/audi"><ion-icon name="logo-youtube" class="medialink"></ion-icon></a>
+        </div>
+        <div class="botrow">
+            <div class="newsletter">
+                <h2>Subscribe to Newsletter</h2>
+                <p>Be the first to know about new Audi launches,<br> events and exclusive offers.</p>
+                <div class="form">
+                    <input type="text" placeholder="Please enter your email." required class="newsmail">
+                    <button class="sub" >Subscribe</button>
+                </div>
+            </div>
+            <div class="botdisc">
+                <h2>Discover</h2>
+                <div class="disclist">
+                    <ul>
+                        <li><a href="">Company</a></li>
+                        <li><a href="">Cars</a></li>
+                        <li><a href="">Electric vehicles</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bothelp">
+                <h2>Help</h2>
+                <div class="disclist">
+                <ul>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Support</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rights">
+            <p class="reserved">© 2020-2024 All Rights Reserved</p>
+        </div>
+    </div>
+</div>
+<script>
+    let searchBtn = document.querySelector('.searchBtn');
+    let closeBtn = document.querySelector('.closeBtn');
+    let searchBox = document.querySelector('.searchBox');
+    let navigation = document.querySelector('.navigation');
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+    let content = document.querySelector('.content');
+    searchBtn.onclick = function(){
+        searchBox.classList.add('active');
+        closeBtn.classList.add('active');
+        searchBtn.classList.add('active');
+        menuToggle.classList.add('hide');
+        header.classList.remove('open');
+        navigation.classList.remove('open');
+        menuToggle.classList.remove('open');
+    }
+    closeBtn.onclick = function(){
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
 
-        searchBtn.onclick = function(){
-            searchBox.classList.add('active');
-            closeBtn.classList.add('active');
-            searchBtn.classList.add('active');
-            menuToggle.classList.add('hide');
-            header.classList.remove('open');
-        }
-        closeBtn.onclick = function(){
-            searchBox.classList.remove('active');
-            closeBtn.classList.remove('active');
-            searchBtn.classList.remove('active');
-            menuToggle.classList.remove('hide');
-
-        }
-        menuToggle.onclick = function(){
-            navigation.classList.toggle('open');
-            searchBox.classList.remove('active');
-            closeBtn.classList.remove('active');
-            searchBtn.classList.remove('active');
-        }
-    </script>
+    }
+    menuToggle.onclick = function(){
+        menuToggle.classList.toggle('open');
+        navigation.classList.toggle('open');
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+    }
+    content.onclick = function(){
+        navigation.classList.remove('open');
+        menuToggle.classList.remove('open');
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    }
+</script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>

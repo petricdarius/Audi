@@ -82,12 +82,12 @@
         font-weight: 300;
     }
     .discover2 {
-        font-weight: 500;
-        width: 55%;
-        left: 5vw;
+        font-weight: 400;
+        width: 80%;
+        left: 0.1em;
         font-size: 3vw;
     }
     .discover2 ion-icon {
-        font-size: 2em;
+        font-size: 1em;
     }
 }

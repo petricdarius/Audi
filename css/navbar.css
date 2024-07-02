@@ -6,7 +6,6 @@
 body{
     background: #dee1e2;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 header{
     position: fixed; 
@@ -151,8 +150,7 @@ header .search{
     }
     .Logo{
         font-size: 4em;
-        margin-right:30%;
-        margin-left:auto;
+        margin-left:35vw;
     }
     .closeBtn{
         font-size: 3.6em;
@@ -167,15 +165,19 @@ header .search{
         z-index: 10;
         transition: transform 0.5s ease;
     }
-    header .navigation{
+    .menuToggle.open {
+        transform: rotate(90deg) translateY(-30px);
+    }
+    .navigation {
         position: absolute;
         opacity: 0;
         visibility: hidden;
         left: 100%;
-        transition: opacity 0.5s ease, transform 0.5s ease; 
-        transform: translateY(-20px); 
+        transition:transform 0.5s ease;
+        transform: translateY(-20px);
     }
-    .navigation.open{
+    
+    .navigation.open {
         top: 80px;
         padding: 40px;
         opacity: 1;
@@ -185,15 +187,11 @@ header .search{
         flex-direction: column;
         background: #fff;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(5a0vh - 80px);
         border-top: 1px solid rgba(0, 0, 0, 0.05);
-        transform: translateY(0); 
-        transition-delay: 0s;
+        transition:transform 0.8s ease !important;
+        transform:translateY(0);
     }
-    .menuToggle.open {
-        transform: rotate(90deg) translateY(-30px);
-    }
-    
     header .navigation li a{
         font-size: 1.5em !important;
     }
