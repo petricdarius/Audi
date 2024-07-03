@@ -205,7 +205,7 @@ header .search{
     }
     .navigation.open {
         border-top: 1px solid rgba(0, 0, 0, 0.05);
-        height: calc(65vh - 80px);
+        height: calc(30em - 80px);
         visibility: visible;
     }
     .navigation li{
