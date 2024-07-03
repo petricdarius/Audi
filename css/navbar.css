@@ -192,25 +192,29 @@ header .search{
     .navigation {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        height: calc(5a0vh - 80px);
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
         color: black;
         background: #fff;
+        overflow: hidden;
+        height: 0;
         visibility: hidden;
-        width: 100%;
-        left:0;
-        padding: 40px;
-        top: -470%;
-        transition: top 1s ease, opacity 1.5s ease, visibility 1.5s ease;
+        transition: height 0.8s ease, visibility 0.7s ease;
     }
     .navigation.open {
-        top: 80px; /* Move into view */
-        left:0;
-        visibility: visible;
-        background: #fff;
-        width: 100%;
-        height: calc(5a0vh - 80px);
         border-top: 1px solid rgba(0, 0, 0, 0.05);
+        height: calc(65vh - 80px);
+        visibility: visible;
+    }
+    .navigation li{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .navigation.open li{
+        margin-top: 10px;
+        margin-left: 20px;
     }
     header .navigation li a {
         font-size: 1.5em !important;
