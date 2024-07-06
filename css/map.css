@@ -194,7 +194,7 @@ header, .content, .footer {
 }
 
 .abs {
-    width: 90%;
+    width: 90% !important;
     position: relative; 
     margin: 0 auto;
 }
@@ -209,7 +209,7 @@ header, .content, .footer {
 
 .numbers img {
     filter: brightness(40%);
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
