@@ -1148,102 +1148,96 @@
     </div>
 </div>
 <script>
-var wlcH2 = document.querySelector(".welcome h2");
-var wlcP = document.querySelector(".welcome p");
+        var wlcH2 = document.querySelector(".welcome h2");
+        var wlcP = document.querySelector(".welcome p");
 
-var nmbp1 = document.querySelector(".centered2 .p1");
-var nmbp2 = document.querySelector(".centered2 .p2");
-var nmbp3 = document.querySelector(".centered2 .p3");
+        var nmbp1 = document.querySelector(" .numbers.p1");
+        var nmbp2 = document.querySelector(".numbers .p2");
+        var nmbp3 = document.querySelector(".numbers .p3");
+
+        var mapElement = document.querySelector('.map');
+
+        var handleScroll = function () {
+            var scrollY = window.scrollY;
+            if (scrollY >= 1390) {
+                mapElement.style.width = '95%';
+            } else {
+                mapElement.style.width = '0%';
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        var myScrollFunc = function () {
+            var y = window.scrollY;
+            if (window.innerWidth > 800) {
+                if (y >= 200) {
+                    wlcH2.classList.add("show");
+                    wlcP.classList.add("show");
+                } else {
+                    wlcH2.classList.remove("show");
+                    wlcP.classList.remove("show");
+                }
+                if (y >= 800) {
+                    nmbp1.classList.add("show");
+                    nmbp2.classList.add("show");
+                    nmbp3.classList.add("show");
+                } else {
+                    nmbp1.classList.remove("show");
+                    nmbp2.classList.remove("show");
+                    nmbp3.classList.remove("show");
+                }
+            } else {
+                wlcH2.classList.add("show");
+                wlcP.classList.add("show");
+                nmbp1.classList.add("show");
+                nmbp2.classList.add("show");
+                nmbp3.classList.add("show");
+            }
+        };
 
 
+        let searchBtn = document.querySelector('.searchBtn');
+        let closeBtn = document.querySelector('.closeBtn');
+        let searchBox = document.querySelector('.searchBox');
+        let navigation = document.querySelector('.navigation');
+        let menuToggle = document.querySelector('.menuToggle');
+        let header = document.querySelector('header');
+        let content = document.querySelector('.content');
 
-var mapElement = document.querySelector('.map');
+        searchBtn.onclick = function () {
+            searchBox.classList.add('active');
+            closeBtn.classList.add('active');
+            searchBtn.classList.add('active');
+            menuToggle.classList.add('hide');
+            header.classList.remove('open');
+            navigation.classList.remove('open');
+            menuToggle.classList.remove('open');
+        };
 
-var handleScroll = function () {
-    var scrollY = window.scrollY;
-    if (window.innerWidth > 800)
-    {
-        if (scrollY >= 1390) {
-        mapElement.style.width = '95%';
-    } else {
-        mapElement.style.width = '0%';
-    }
-    }
-};
+        closeBtn.onclick = function () {
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+            menuToggle.classList.remove('hide');
+        };
 
-window.addEventListener('scroll', handleScroll);
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('open');
+            navigation.classList.toggle('open');
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+        };
 
-var myScrollFunc = function () {
-    var y = window.scrollY;
-    if (window.innerWidth > 800) {
-        if (y >= 200) {
-            wlcH2.classList.add("show");
-            wlcP.classList.add("show");
-        } else {
-            wlcH2.classList.remove("show");
-            wlcP.classList.remove("show");
-        }
-    } else {
-        wlcH2.classList.add("show");
-        wlcP.classList.add("show");
-    }
-    if ( y >= 800){
-        nmbp1.classList.add("show");
-        nmbp2.classList.add("show");
-        nmbp3.classList.add("show");
-
-    }
-    else{
-        nmbp1.classList.remove("show");
-        nmbp2.classList.remove("show");
-        nmbp3.classList.remove("show");
-    }
-};
-
-window.addEventListener("scroll", myScrollFunc);
-
-let searchBtn = document.querySelector('.searchBtn');
-let closeBtn = document.querySelector('.closeBtn');
-let searchBox = document.querySelector('.searchBox');
-let navigation = document.querySelector('.navigation');
-let menuToggle = document.querySelector('.menuToggle');
-let header = document.querySelector('header');
-let content = document.querySelector('.content');
-
-searchBtn.onclick = function() {
-    searchBox.classList.add('active');
-    closeBtn.classList.add('active');
-    searchBtn.classList.add('active');
-    menuToggle.classList.add('hide');
-    header.classList.remove('open');
-    navigation.classList.remove('open');
-    menuToggle.classList.remove('open');
-};
-
-closeBtn.onclick = function() {
-    searchBox.classList.remove('active');
-    closeBtn.classList.remove('active');
-    searchBtn.classList.remove('active');
-    menuToggle.classList.remove('hide');
-};
-
-menuToggle.onclick = function() {
-    menuToggle.classList.toggle('open');
-    navigation.classList.toggle('open');
-    searchBox.classList.remove('active');
-    closeBtn.classList.remove('active');
-    searchBtn.classList.remove('active');
-};
-
-content.onclick = function() {
-    navigation.classList.remove('open');
-    menuToggle.classList.remove('open');
-    searchBox.classList.remove('active');
-    closeBtn.classList.remove('active');
-    menuToggle.classList.remove('hide');
-};
-
-</script>
+        content.onclick = function () {
+            navigation.classList.remove('open');
+            menuToggle.classList.remove('open');
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            menuToggle.classList.remove('hide');
+        };
+    </script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
