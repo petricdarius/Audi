@@ -127,6 +127,46 @@ svg path {
     .hq2 {
         height: 300px;
     }
+    .centered2 p {
+        width:11em!important;
+        margin: 0 30px;
+        font-size:0.8vw;
+    }
+
+    .p3{
+        margin-left:2em !important;
+    }
+    .centered h2{
+        margin-top:1em;
+    }
+    
+}
+
+@media(max-width:1000px){
+    circle {
+        r: 10;
+    }
+    .map {
+        width: 100%;
+    }
+    .welcome {
+        margin-top: 4;
+    }
+    .welcome p {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .mapttl h2 {
+        font-size: 2em;
+    }
+    .hq2 {
+        height: 300px;
+    }
+    .centered2 p {
+        width:10em!important;
+        margin: 0 20px;
+        font-size:0.8vw;
+    }
 }
 
 .Germany {
@@ -141,17 +181,46 @@ svg path {
     fill: #444141;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Roboto Mono", monospace;
+}
+
+header, .content, .footer {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.abs {
+    width: 90%;
+    position: relative; 
+    margin: 0 auto;
+}
+
 .numbers {
+    max-width: 100%;
     position: relative;
-    width: 100%;
     margin-top: 4vw;
     text-align: center;
+    overflow: hidden;
 }
 
 .numbers img {
-    width: 100%;
     filter: brightness(40%);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
+.numbers .centered {
+    max-width: 50%;
+    padding: 0;
+    margin: 0 auto;
+}
+
 
 .numbers h2 {
     margin-bottom: 40px;
@@ -175,17 +244,19 @@ svg path {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -50%);
 }
 
 .centered2 p {
-    width:500px;
-    margin: 0 70px;
+    width:300px;
+    margin: 0 0.7vw;
     font-size:2vw;
 }
 
 .centflex {
+    margin-top:0;
     display: flex;
+    vertical-align: center;
     flex-direction: row;
 }
 hr{
