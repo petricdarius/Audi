@@ -1159,17 +1159,20 @@
     var mapElement = document.querySelector('.map');
 
     var handleScroll = function() {
-        var scrollY = window.scrollY;
-        if (window.innerWidth >= 3000) {
-            mapElement.style.width = scrollY >= window.innerWidth * 60 / 100 ? '95%' : '0%';
-        }
-        else if  (window.innerWidth >= 2000) {
-            mapElement.style.width = scrollY >= window.innerWidth * 50 / 100 ? '95%' : '0%';
-        } 
-        else {
-            mapElement.style.width = scrollY >= 300 ? '95%' : '0%';
-        }
-    };
+    var scrollY = window.scrollY;
+    var windowWidth = window.innerWidth;
+    if (windowWidth > 3500) {
+        mapElement.style.width = scrollY >= (windowHeight * 0.99) ? '95%' : '0%';
+    }
+    else if (windowWidth >= 3000) {
+        mapElement.style.width = scrollY >= (windowWidth * 0.60) ? '95%' : '0%';
+    } else if (windowWidth >= 2000) {
+        mapElement.style.width = scrollY >= (windowWidth * 0.50) ? '95%' : '0%';
+    } else {
+        mapElement.style.width = scrollY >= 300 ? '95%' : '0%';
+    } 
+};
+
 
     var myScrollFunc = function() {
         var y = window.scrollY;
@@ -1237,7 +1240,6 @@
     };
 });
 
-    </script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </script>    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
