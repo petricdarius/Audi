@@ -39,12 +39,23 @@ p{
 .tracknews .tracktext,
 .r8news .r8text,
 .etronnews .etrontext {
-    padding: 10px;
     text-align: left;
     text-decoration: none;
     color: #333;
     font-weight: 300;
     font-size: 1.4vw;
+}
+
+.tracknews .tracktext p{
+    padding:10px;
+}
+
+.r8news .r8text p{
+    padding:10px;
+}
+
+.etronnews .etrontext p{
+    padding:10px;
 }
 
 .publish {
@@ -204,4 +215,7 @@ p{
     .newsdesc{
         font-size:2em;
     }
+}
+.tracktext, .r8text, .etrontext{
+    padding:20px !important;
 }

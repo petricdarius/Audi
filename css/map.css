@@ -87,7 +87,7 @@ svg path {
     visibility: hidden;
     transform: translateY(50px);
     transition: opacity 1.2s ease, transform 1.2s ease;
-
+    
 }
 
 .centered2 .p3.show {
@@ -118,7 +118,7 @@ svg path {
         margin-top: 0;
     }
     .welcome p {
-        width: 100%;
+        width: 90% !important;
         font-size: 0.7em;
     }
     .mapttl h2 {
@@ -139,7 +139,9 @@ svg path {
     .centered h2{
         margin-top:1em;
     }
-    
+    .abs{
+        width:100% !important;
+    }
 }
 
 @media(max-width:1000px){
@@ -194,7 +196,7 @@ header, .content, .footer {
 }
 
 .abs {
-    width: 90% !important;
+    width: 90%;
     position: relative; 
     margin: 0 auto;
 }

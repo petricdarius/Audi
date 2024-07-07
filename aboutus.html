@@ -52,7 +52,7 @@
         <div class="welcome" id="wlc">        
             <h2>Welcome to Audi</h2>
             <p>
-                At Audi, we deliver the ultimate driving experience through innovation, design, and performance. From electric cars to legendary sports models, our commitment to excellence shines in every vehicle. Discover our latest models, stay updated on events, and get exclusive offers by subscribing to our newsletter. Thank you for visiting Audi.
+                At Audi, we deliver the ultimate driving experience through innovation, design, and performance. From electric cars to legendary sports models, our commitment to excellence shines in every vehicle.
                 </p>
         </div>
         <div class="abs">
@@ -1160,10 +1160,14 @@
 
     var handleScroll = function() {
         var scrollY = window.scrollY;
-        if (window.innerWidth > 1000) {
-            mapElement.style.width = scrollY >= 1000 ? '95%' : '0%';
-        } else {
-            mapElement.style.width = scrollY >= 1000 ? '95%' : '0%';
+        if (window.innerWidth >= 3000) {
+            mapElement.style.width = scrollY >= window.innerWidth * 60 / 100 ? '95%' : '0%';
+        }
+        else if  (window.innerWidth >= 2000) {
+            mapElement.style.width = scrollY >= window.innerWidth * 50 / 100 ? '95%' : '0%';
+        } 
+        else {
+            mapElement.style.width = scrollY >= 300 ? '95%' : '0%';
         }
     };
 
@@ -1182,9 +1186,9 @@
         } else if (isWideScreen) {
             wlcH2.classList.toggle("show", y >= 200);
             wlcP.classList.toggle("show", y >= 200);
-            nmbp1.classList.toggle("show", y >= 730);
-            nmbp2.classList.toggle("show", y >= 730);
-            nmbp3.classList.toggle("show", y >= 730);
+            nmbp1.classList.toggle("show", y >= 510);
+            nmbp2.classList.toggle("show", y >= 510);
+            nmbp3.classList.toggle("show", y >= 510);
         }
     };
 
