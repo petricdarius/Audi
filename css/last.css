@@ -1,0 +1,150 @@
+.title{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position:relative;
+    width:100%;
+    text-align: center;
+    height:auto;
+}
+img{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.title-text h1{
+    position: absolute;
+    top: 15%;
+    left: 36px;
+    color:#d3cfcf;
+    font-size:2vw;
+}
+.title-text p{
+    position: absolute;
+    top: 25%;
+    left: 36px;
+    color:#d3cfcf;
+    font-size:1vw;
+}
+.title img{
+    width:100%;
+    object-position: center;
+    filter:brightness(70%);
+}
+@media(max-width: 768px) {
+    .title img {
+        height: auto;
+    }
+    .title-text h1{
+         top:6.5em;
+         font-size:1em;
+         left:10px;
+    }
+    .title-text p{
+        top:8.5rem;
+        font-size:0.5em;
+        left:10px;
+    }
+}
+.t1, .t2{
+    text-align: center;
+}
+
+.t1{
+    padding: 30px;
+    padding-bottom: 5px;
+}
+.t2{
+    font-weight: 350;
+    padding-bottom:30px;
+}
+.centlist {
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;  /* Center the list horizontally */
+    position: sticky;
+    background: #000;
+    text-align: center;
+    position: relative;  /* Add this line to make it a relative container */
+}
+
+.centlist .list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 400;
+    position: relative;
+    margin-top: 5em;
+}
+
+.centlist .list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+
+.centlist p {
+    color: #fff;
+    font-weight: 200;
+    margin: 0;  /* Remove any default margin */
+    position: absolute;  /* Position it absolutely */
+    top: 0;  /* Top left corner */
+    left: 0;
+    padding: 20px;  /* Adjust padding as needed */
+}
+
+.centlist a::before {
+    content: '';
+    bottom: -2px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #e6dfdf;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.centlist a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+/* .stgen img{
+    animation: spin 1s linear forwards;
+    background: #dee1e2;
+} */
+
+/* @keyframes spin {
+    from {
+      transform: translateX(-150px) rotate(0deg);
+    }
+    to {
+      transform: translateX(250px) rotate(2160deg);
+    }
+  } */
+.first{
+    width:100%;
+}
+
+.selection{
+    border:1px solid red;
+    width:auto;
+    margin-right:15%;
+}
+
+.first .selection{
+    text-align: left;
+    margin-top:15vw;
+    margin-left:80%;
+}
