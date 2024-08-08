@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="a3195b-audi.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/last.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last R8</title>
+</head>
+<body>
+    <style>
+        * {  
+            
+            scroll-behavior: smooth !important;
+            font-family: "Roboto Mono", monospace;
+        }
+        ::selection{
+            color:#fff;
+            background: black;
+        }
+    </style>
+    <header name="top">
+        <a href="index.html" class="Logo"><i class="lni lni-audi"></i></a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Electric vehicles</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search" class="searchBtn"></ion-icon>
+                    <ion-icon name="close" class="closeBtn"></ion-icon>
+                </span>
+            </div>
+            <ion-icon name="menu" class="menuToggle"></ion-icon>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Search" name="" id="">
+        </div>
+    </header>
+    <div class="content">
+        <div class="title">
+            <img src="images/Untitled Project.jpg" alt="">
+            <div class="title-text">
+                <h1>The end of the journey.</h1>
+                <p>Audi R8: A legacy to be remembered.</p>
+            </div>
+        </div>
+
+        <h1 class="t1">Aggresive, Sporty, Elegant, Powerful
+        </h1>
+        <h1 class="t2">The Audi R8 peaked in all of it's debuts.</h1>
+
+        <div class="centlist">
+            <p>Specifications may very.</p>
+            <div class="list">
+                <a href="#first">1st Generation</a>
+                <a href="" style="margin-right:20vw;margin-left: 20vw;;">2nd Generation</a>
+                <a href="">The R8 GT</a>
+            </div>
+        </div>
+        <div class="first">
+            <ul class="selection">
+                <h2>Chapters</h2>
+                <li>Exterior</li>
+                <li>Interior</li>
+                <li>Power</li>
+            </ul>
+        </div>
+       
+       <div class="bottom">
+            <div class="medias">
+                <a href="https://www.instagram.com/audi/"><ion-icon name="logo-instagram" class="medialink"></ion-icon></a>
+                <a href="https://www.facebook.com/audi.ro/?locale=ro_RO"><ion-icon name="logo-facebook" class="medialink"></ion-icon></a>
+                <a href="https://x.com/audi"><ion-icon name="logo-twitter" class="medialink"></ion-icon></a>
+                <a href="https://www.youtube.com/audi"><ion-icon name="logo-youtube" class="medialink"></ion-icon></a>
+            </div>
+            <div class="botrow">
+                <div class="newsletter">
+                    <h2>Subscribe to Newsletter</h2>
+                    <p>Be the first to know about new Audi launches,<br> events and exclusive offers.</p>
+                    <div class="form">
+                        <input type="text" placeholder="Please enter your email." required class="newsmail">
+                        <button class="sub">Subscribe</button>
+                    </div>
+                </div>
+                <div class="botdisc">
+                    <h2>Discover</h2>
+                    <div class="disclist">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Cars</a></li>
+                            <li><a href="">Electric vehicles</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bothelp">
+                    <h2>Help</h2>
+                    <div class="disclist">
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rights">
+                <p class="reserved">© 2020-2024 All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchBtn = document.querySelector('.searchBtn');
+    let closeBtn = document.querySelector('.closeBtn');
+    let searchBox = document.querySelector('.searchBox');
+    let navigation = document.querySelector('.navigation');
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+    let content = document.querySelector('.content');
+    searchBtn.onclick = function() {
+        searchBox.classList.add('active');
+        closeBtn.classList.add('active');
+        searchBtn.classList.add('active');
+        menuToggle.classList.add('hide');
+        header.classList.remove('open');
+        navigation.classList.remove('open');
+        menuToggle.classList.remove('open');
+    };
+
+    closeBtn.onclick = function() {
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    };
+
+    menuToggle.onclick = function() {
+        menuToggle.classList.toggle('open');
+        navigation.classList.toggle('open');
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+    };
+
+    content.onclick = function() {
+        searchBtn.classList.remove('active');
+        navigation.classList.remove('open');
+        menuToggle.classList.remove('open');
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    };
+    
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+    }
+
+    document.querySelector('.prev').addEventListener('click', function() {
+        plusSlides(-1);
+    });
+
+    document.querySelector('.next').addEventListener('click', function() {
+        plusSlides(1);
+    });
+});
+</script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
